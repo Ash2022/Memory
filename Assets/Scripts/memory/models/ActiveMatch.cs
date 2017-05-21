@@ -10,30 +10,16 @@ namespace memory.models
 		Match					m_match;
 		List<MatchResults> 		m_rounds_results = new List<MatchResults>();
 
-
-		public event Action<MatchResults> OnScoreChange;
-
 		public ActiveMatch (Match match)
 		{
 			m_match = match;
 
 		}
 
-
-
 		public void	AddResults(MatchResults m_results)
 		{
 			m_rounds_results.Add(m_results); 
 
-			if (OnScoreChange != null)
-				OnScoreChange (m_results);
-		}
-
-
-
-		public Match GetMatch()
-		{
-			return	m_match;
 		}
 
 		public int	GetRoundsCount()
@@ -57,6 +43,7 @@ namespace memory.models
 				return m_match.GetType() == typeof(SingleMatch);
 			}
 		}
+
 
 	}
 

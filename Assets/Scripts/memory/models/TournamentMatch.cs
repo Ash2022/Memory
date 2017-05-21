@@ -10,12 +10,6 @@ namespace memory.models
 
 	
 
-		public TournamentMatch(TournamentMatch arena_match)
-		{
-			
-			m_turn_play_time = arena_match.GetPlayDelay ();
-
-		}
 
 		public TournamentMatch(int high_points, int low_points,float bid_delay,float turn_delay,int pay_out_coins,int pay_out_crowns)
 		{
@@ -41,7 +35,7 @@ namespace memory.models
 
 		public override int	GetBuyIn()
 		{
-			return m_tournament.GetBuyIn();
+			return m_tournament.Buy_in;
 		}
 
 		public override PlayingMode Playing_mode {

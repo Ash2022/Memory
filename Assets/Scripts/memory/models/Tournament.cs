@@ -19,7 +19,7 @@ namespace memory.models
 		int				m_num_wins;
 
 
-		List<TournamentMatch>	m_arena_matches = new List<TournamentMatch>();
+		List<TournamentMatch>	m_tournament_matches = new List<TournamentMatch>();
 
 
 
@@ -38,72 +38,6 @@ namespace memory.models
 
 		}
 
-
-
-		public int GetNumStages()
-		{
-			return m_arena_matches.Count;
-		}
-
-
-		public string GetID()
-		{
-			return m_id;
-		}
-
-		public void SetId(string id) {
-			m_id = id;
-		}
-
-		public string GetName()
-		{
-			return m_name;
-		}
-
-		public void SetName(string name) {
-			m_name = name;
-		}
-
-		public TournamentMatch GetArenaMatch(int index)
-		{
-			return m_arena_matches[index-1];
-		}
-
-		public int	GetLevel()
-		{
-			return	m_level;
-		}
-
-		public void SetLevel(int level) {
-			m_level = level;
-		}
-
-		public int	GetBuyIn()
-		{
-			return	m_buy_in;
-		}
-
-		public void SetBuyIn(int buyIn) {
-			m_buy_in = buyIn;
-		}
-
-		public int	GetPayOutCoins()
-		{
-			return	m_payout_coins;
-		}
-
-		public void SetPayOutCoins(int payout) {
-			m_payout_coins = payout;
-		}
-
-
-	
-		public List<TournamentMatch> Arena_matches {
-			get {
-				return m_arena_matches;
-			}
-		}
-
 		public PlayingMode Playing_mode {
 			get {
 				return m_playing_mode;
@@ -119,6 +53,18 @@ namespace memory.models
 			}
 			set{
 				m_num_wins = value;
+			}
+		}
+
+		public List<TournamentMatch> Tournament_matches {
+			get {
+				return m_tournament_matches;
+			}
+		}
+
+		public int Buy_in {
+			get {
+				return m_buy_in;
 			}
 		}
 	}

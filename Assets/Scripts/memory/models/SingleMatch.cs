@@ -36,6 +36,11 @@ namespace memory.models
 
 		}
 
+		public string GetTableID()
+		{
+			return m_table_id;
+		}
+
 		public override int	GetBuyIn()
 		{
 			return	m_buy_in;
